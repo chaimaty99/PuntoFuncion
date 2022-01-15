@@ -31,6 +31,9 @@ public class VentanaCaracG extends javax.swing.JFrame {
          modelo = new DefaultTableModel();
          modelo.setColumnIdentifiers(columnas);
          modelo.addColumn(columnas, tablacaracg.getAtributos());
+       //  for(int i=0;i<tablacaracg.getAtributos().length;i++){
+         //    modelo.addColumn(columnas, tablacaracg.getinfluencia(i));
+         //}
          
          tabla = new JTable (modelo);
        
