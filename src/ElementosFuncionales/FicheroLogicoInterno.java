@@ -6,7 +6,7 @@ package ElementosFuncionales;
 
 /**
  *
- * @author David
+ * @author Chaima
  */
 public class FicheroLogicoInterno {
     

@@ -6,7 +6,7 @@ package CaracteristicasGenerales;
 
 /**
  *
- * @author David
+ * @author Chaima
  */
 public class TablaCaractGenerales {
 

@@ -11,7 +11,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author chaim
+ * @author Chaima
  */
 public class VentanaCaracG extends javax.swing.JFrame {
 
