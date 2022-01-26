@@ -12,7 +12,7 @@ package CaracteristicasGenerales;
 public class Tabla {
     
     private int inf[];
-    int suma;
+    int SVA;
     
     public Tabla(int influencias[], int suma){
         
@@ -20,7 +20,11 @@ public class Tabla {
             inf[i] = influencias[i];
         }
         
-        this.suma = suma;
+        this.SVA = suma;
+        
+    }
+    
+    public Tabla(){
         
     }
     
@@ -41,7 +45,7 @@ public class Tabla {
         System.out.println("12. Facilidad de operación                                           " + inf[11]);
         System.out.println("13. Localizaciones múltiples                                         " + inf[12]);
         System.out.println("14. Facilidad de cambios                                             " + inf[13]);
-        System.out.println("                                                           Suma      " + suma);
+        System.out.println("                                                           Suma      " + SVA);
         
         
     }

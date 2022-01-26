@@ -9,43 +9,40 @@ package ElementosFuncionales;
  * @author Chaima
  */
 public class ConsultaExterna {
-    
-    public ConsultaExterna(){
-        
+
+    public ConsultaExterna() {
+
     }
-    
-    public String GetComplejidad(String ComplejidadEE, String ComplejidadSE){
-        
+
+    public String GetComplejidad(String ComplejidadEE, String ComplejidadSE) {
+
         String Compl = "";
-        
-        if(ComplejidadEE == "C"){
+
+        if (ComplejidadEE == "C") {
             Compl = ComplejidadEE;
-        }
-        else{
-            if(ComplejidadSE == "C"){
+        } else {
+            if (ComplejidadSE == "C") {
                 Compl = ComplejidadSE;
-            }
-            else{
-                if(ComplejidadEE == "M"){
+            } else {
+                if (ComplejidadEE == "M") {
                     Compl = ComplejidadEE;
-                }
-                else{
-                    if(ComplejidadSE == "M"){
+                } else {
+                    if (ComplejidadSE == "M") {
                         Compl = ComplejidadSE;
-                    }
-                    else{
-                        if(ComplejidadEE == "S"){
+                    } else {
+                        if (ComplejidadEE == "S") {
                             Compl = ComplejidadEE;
-                        }
-                        else{
-                            if(ComplejidadSE == "S"){
+                        } else {
+                            if (ComplejidadSE == "S") {
                                 Compl = ComplejidadSE;
                             }
                         }
                     }
                 }
-            
-        
+
+                
+            }
+        }
         return Compl;
     }
 }

@@ -4,6 +4,8 @@
  */
 package puntofuncioncalculo;
 
+import CaracteristicasGenerales.CaractGenerales;
+import CaracteristicasGenerales.Tabla;
 import ElementosFuncionales.ConsultaExterna;
 import ElementosFuncionales.EntradaExterna;
 import ElementosFuncionales.FicheroLogicoExterno;
@@ -26,7 +28,9 @@ public class PuntoFuncionCalculo {
         
         int FLI, FLE, CE, EE, SE;
         int RFLI, RFLE, RCE, REE, RSE;
-        
+        CalculoPFNA pfna;
+        CaractGenerales CaracG = new CaractGenerales();
+        Tabla tabla = new Tabla();
         
         String complFLI = "";
         int complfli=0;
@@ -44,6 +48,7 @@ public class PuntoFuncionCalculo {
         SalidaExterna SalidaExterna = new SalidaExterna();
         FicheroLogicoExterno FicheroLogicoExterno = new FicheroLogicoExterno();
         FicheroLogicoInterno FicheroLogicoInterno = new FicheroLogicoInterno();
+       
         
         
         System.out.println("Ficheros referenciados en ficheros logicos internos:");
@@ -115,8 +120,10 @@ public class PuntoFuncionCalculo {
         
         
         System.out.println("\n\nComplejidad calculada con exito");
-        CalculoPFNA pfna=new CalculoPFNA(num1,num2,num3,num4,num5);
+        pfna=new CalculoPFNA(num1,num2,num3,num4,num5);
         
+        CaracG.pedirinfluencias();
+        tabla.mostrarTabla();
         
     }
     

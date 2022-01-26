@@ -30,7 +30,7 @@ public class CaractGenerales {
         }
     }
     
-    public int getsumainfluencias(){
+    public int getSVA(){
         
         int suma=0;
         for(int i=0; i<14;i++){
@@ -73,7 +73,7 @@ public class CaractGenerales {
         System.out.println("Indica el valor de la influencia de la facilidad de cambios del proyecto: ");
         setinfluencia(sc.nextInt(),13);
         
-        tabla = new Tabla(influencias, getsumainfluencias());
+        tabla = new Tabla(influencias, getSVA());
         
     }
     
