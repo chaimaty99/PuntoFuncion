@@ -6,7 +6,7 @@ package puntofuncioncalculo;
 
 /**
  *
- * @author David
+ * @author Chaima
  */
 public class CalculoPFNA {
 
@@ -25,7 +25,6 @@ public class CalculoPFNA {
     
     public CalculoPFNA(){
         
-        
     }
     
     public int GetPFNA(){
@@ -34,14 +33,14 @@ public class CalculoPFNA {
     
     
     public void tabla(){
-        
+        System.out.println("---------------PFNA------------------------------------");
         System.out.println("Descripcion                             |   Total P.F");
         System.out.println("Nº de entradas externas                 |   " + CEE );
         System.out.println("Nº de salidas externas                  |   " + CSE);
         System.out.println("Nº grupos logicos de datos internos     |   " + CFLI);
         System.out.println("Nº grupos logicos de datos de interfaz  |   " + CFLI );
         System.out.println("Nº de consultas externas                |   " + CCE);
-        System.out.println("PFNA                                    |   " + PFNA);
+        System.out.println("                            PFNA        |   " + PFNA);
         
     }
     

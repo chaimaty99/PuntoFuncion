@@ -53,11 +53,6 @@ public class FicheroLogicoInterno {
                         if(DatosElementales >= 20 ){
                             Compl = "C";
                         }
-                       /* else{
-                            if(DatosElementales > 50){
-                                Compl = "C";
-                            }
-                        }*/
                     }    
                 }
             }

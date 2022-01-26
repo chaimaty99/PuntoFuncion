@@ -5,14 +5,45 @@
  */
 package puntofuncioncalculo;
 
+import CaracteristicasGenerales.CaractGenerales;
+
 /**
  *
- * @author chaim
+ * @author Chaima
  */
 public class AjusteFinalPFA {
     
     CalculoPFNA pfna = new CalculoPFNA();
+    CaractGenerales Carg=new CaractGenerales();
+    private double FA;
+    private double PFA;
     
-    public 
+    public AjusteFinalPFA(CalculoPFNA pfna,CaractGenerales caracg){
+        this.pfna=pfna;
+        this.Carg=caracg;
+    }
+    
+    public double calcularFA(){
+        
+        FA=0.65+(0.01*Carg.getSVA());
+        return FA;
+        
+    }
+    
+    public double calcularPFA(){
+        
+        PFA=pfna.GetPFNA()*FA;
+        return PFA;
+        
+    }
+    
+    public void mostrarAjusteFinal(){
+        
+        System.out.println("\n");
+        System.out.println("-----------AJUSTE FINAL-----------");
+        System.out.println("       FA = "+calcularFA());
+        System.out.println("       PFA ="+calcularPFA());
+        
+    }
     
 }

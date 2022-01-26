@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author David
+ * @author Chaima
  */
 public class PuntoFuncionCalculo {
 
@@ -30,7 +30,6 @@ public class PuntoFuncionCalculo {
         int RFLI, RFLE, RCE, REE, RSE;
         CalculoPFNA pfna;
         CaractGenerales CaracG = new CaractGenerales();
-        Tabla tabla = new Tabla();
         
         String complFLI = "";
         int complfli=0;
@@ -50,7 +49,7 @@ public class PuntoFuncionCalculo {
         FicheroLogicoInterno FicheroLogicoInterno = new FicheroLogicoInterno();
        
         
-        
+        System.out.println("-----------------ELEMENTOS FUNCIONALES----------------");
         System.out.println("Ficheros referenciados en ficheros logicos internos:");
         RFLI = sc.nextInt();
         System.out.println("Datos elementales de ficheros logicos internos: ");
@@ -120,10 +119,15 @@ public class PuntoFuncionCalculo {
         
         
         System.out.println("\n\nComplejidad calculada con exito");
+        System.out.println("\n");
+        System.out.println("\n");
         pfna=new CalculoPFNA(num1,num2,num3,num4,num5);
+        pfna.tabla();
         
         CaracG.pedirinfluencias();
-        tabla.mostrarTabla();
+        
+        AjusteFinalPFA ajuste=new AjusteFinalPFA(pfna,CaracG);
+        ajuste.mostrarAjusteFinal();
         
     }
     

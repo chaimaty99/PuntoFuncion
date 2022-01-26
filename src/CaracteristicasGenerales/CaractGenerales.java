@@ -44,6 +44,8 @@ public class CaractGenerales {
     public void pedirinfluencias(){
         
         Scanner sc=new Scanner(System.in);
+        System.out.println("\n");
+        System.out.println("------------------AJUSTE DE CARACTERÍSTICAS GENERALES--------------------------");
         System.out.println("Indica el valor de la influencia de la comunicacion de deatos del proyecto ");
         setinfluencia(sc.nextInt(),0);
         System.out.println("Indica el valor de la influencia de las funciones distribuidas del proyecto: ");
@@ -74,6 +76,7 @@ public class CaractGenerales {
         setinfluencia(sc.nextInt(),13);
         
         tabla = new Tabla(influencias, getSVA());
+        tabla.mostrarTabla();
         
     }
     

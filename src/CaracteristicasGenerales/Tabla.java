@@ -7,7 +7,7 @@ package CaracteristicasGenerales;
 
 /**
  *
- * @author chaim
+ * @author Chaima
  */
 public class Tabla {
     
@@ -15,6 +15,8 @@ public class Tabla {
     int SVA;
     
     public Tabla(int influencias[], int suma){
+        
+        inf=new int[14];
         
         for (int i = 0; i < influencias.length; i++) {
             inf[i] = influencias[i];
@@ -30,7 +32,9 @@ public class Tabla {
     
     public void mostrarTabla(){
         
-        System.out.println("                           Atributos                          |        Influencia");
+        
+        System.out.println("\n");
+        System.out.println("                           ATRIBUTOS                         |  INFLUENCIA");
         System.out.println("1. Comunicación de datos                                             " + inf[0]);
         System.out.println("2. Funciones distribuidas                                            " + inf[1]);
         System.out.println("3. Prestaciones                                                      " + inf[2]);
@@ -45,7 +49,7 @@ public class Tabla {
         System.out.println("12. Facilidad de operación                                           " + inf[11]);
         System.out.println("13. Localizaciones múltiples                                         " + inf[12]);
         System.out.println("14. Facilidad de cambios                                             " + inf[13]);
-        System.out.println("                                                           Suma      " + SVA);
+        System.out.println("                                                           SUMA     " + SVA);
         
         
     }
