@@ -27,11 +27,17 @@ public class PuntoFuncionCalculo {
         int FLI, FLE, CE, EE, SE;
         int RFLI, RFLE, RCE, REE, RSE;
         
+        
         String complFLI = "";
+        int complfli=0;
         String complFLE = "";
+        int complfle=0;
         String complEE = "";
+        int complee=0;
         String complSE = "";
+        int complse=0;
         String complCE = "";
+        int complce=0;
         
         ConsultaExterna ConsultaExterna = new ConsultaExterna();
         EntradaExterna EntradaExterna = new EntradaExterna();
@@ -69,8 +75,47 @@ public class PuntoFuncionCalculo {
         complSE = SalidaExterna.GetComplejidad(RSE, SE);
         complCE = ConsultaExterna.GetComplejidad(complEE, complSE);
         
-        System.out.println("\n\nComplejidad calculada con exito");
+        if(complFLE=="S"){
+            complfle=5;
+        }else if(complFLE=="M"){
+            complfle=7;
+        }else complfle=10;
         
+        if(complFLI=="S"){
+            complfli=7;
+        }else if(complFLI=="M"){
+            complfle=10;
+        }else complfli=15;
+        
+        if(complSE=="S"){
+            complse=4;
+        }else if(complSE=="M"){
+            complse=5;
+        }else complse=7;
+        
+        if(complEE=="S"){
+            complee=3;
+        }else if(complEE=="M"){
+            complee=4;
+        }else complee=6;
+        
+        if(complCE=="S"){
+            complce=3;
+        }else if(complCE=="M"){
+            complce=4;
+        }else complce=6;
+        
+        
+        int num1=RFLI*complfli;
+        int num2=RFLE*complfle;
+        int num3=REE*complee;
+        int num4=RSE*complse;
+        int num5=RCE*complce;
+        
+        
+        
+        System.out.println("\n\nComplejidad calculada con exito");
+        CalculoPFNA pfna=new CalculoPFNA(num1,num2,num3,num4,num5);
         
         
     }

@@ -53,11 +53,7 @@ public class EntradaExterna {
                         if(DatosElementales >= 5){
                             Compl = "C";
                         }
-                      /* else{
-                            if(DatosElementales > 15){
-                                Compl = "C";
-                            }
-                        }*/
+                      
                     }    
                 }
             }
