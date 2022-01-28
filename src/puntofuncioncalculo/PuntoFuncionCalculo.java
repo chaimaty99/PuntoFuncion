@@ -6,12 +6,16 @@ package puntofuncioncalculo;
 
 import CaracteristicasGenerales.CaractGenerales;
 import CaracteristicasGenerales.Tabla;
+import ISBSG.TablaEsfuerzo;
+import ISBSG.TablaDuracion;
 import ElementosFuncionales.ConsultaExterna;
 import ElementosFuncionales.EntradaExterna;
 import ElementosFuncionales.FicheroLogicoExterno;
 import ElementosFuncionales.FicheroLogicoInterno;
 import ElementosFuncionales.SalidaExterna;
 import java.util.Scanner;
+import puntofuncioncalculo.AjusteFinalPFA;
+import puntofuncioncalculo.CalculoPFNA;
 
 /**
  *
@@ -30,6 +34,8 @@ public class PuntoFuncionCalculo {
         int RFLI, RFLE, RCE, REE, RSE;
         CalculoPFNA pfna;
         CaractGenerales CaracG = new CaractGenerales();
+        TablaEsfuerzo te = new TablaEsfuerzo();
+        TablaDuracion td = new TablaDuracion();
         
         String complFLI = "";
         int complfli=0;
@@ -127,7 +133,23 @@ public class PuntoFuncionCalculo {
         CaracG.pedirinfluencias();
         
         AjusteFinalPFA ajuste=new AjusteFinalPFA(pfna,CaracG);
-        ajuste.mostrarAjusteFinal();
+        double PFA = ajuste.mostrarAjusteFinal();
+        
+        te.MostrarTablaEsfuerzo();
+        System.out.println("\nIntroduzca la caracteristica de su proyecto para determinar el esfuerzo: ");
+        sc.nextLine();
+        String e = sc.nextLine();
+        
+        double esfuerzo = te.SeleccionarEsfuerzo(e, PFA);
+        System.out.println("Esfuerzo: " + esfuerzo + "\n\n");
+        
+        td.MostrarTablaDuracion();
+        System.out.println("\nIntroduzca la caracteristica de su proyecto para determinar la duracion: ");
+        String d = sc.nextLine();
+        
+        double duracion = td.SeleccionarDuracion(d, PFA);
+        System.out.println("Duracion: " + duracion);
+        
         
     }
     

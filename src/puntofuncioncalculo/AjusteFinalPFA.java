@@ -27,23 +27,30 @@ public class AjusteFinalPFA {
         
         FA=0.65+(0.01*Carg.getSVA());
         return FA;
-        
     }
     
-    public double calcularPFA(){
+    public double calculoPFA(){
         
         PFA=pfna.GetPFNA()*FA;
-        return PFA;
         
+        return PFA;
     }
     
-    public void mostrarAjusteFinal(){
+    public double GetPFA(){
+        
+        return PFA;
+    }
+    
+    public double mostrarAjusteFinal(){
+        
+        //double ResPFA = calculoPFA();
         
         System.out.println("\n");
         System.out.println("-----------AJUSTE FINAL-----------");
-        System.out.println("       FA = "+calcularFA());
-        System.out.println("       PFA ="+calcularPFA());
+        System.out.println("       FA = " + calcularFA());
+        System.out.println("       PFA = " + calculoPFA() + "\n\n");
         
+        return calculoPFA();
     }
     
 }
